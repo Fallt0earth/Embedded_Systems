@@ -1,0 +1,97 @@
+
+#include <stdint.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include "inc/hw_memmap.h"
+#include "driverlib/debug.h"
+#include "driverlib/gpio.h"
+#include "driverlib/sysctl.h"
+void delay(float modifier);
+
+void blink(char color, float rate, int blinks){
+    int i = 0;
+    while(blinks < i){
+    //make red
+    if(color == 'r'){
+        //turn on led
+        GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, GPIO_PIN_1);
+        //wait
+        delay(rate);
+        //turn off led
+        GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, 0x0);
+        delay(rate);
+    }
+    //make blue
+    else if(color == 'b'){
+        GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_2, GPIO_PIN_2);
+        delay(rate);
+        GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_2, 0x0);
+        delay(rate);
+    }
+    //make green
+    else{
+        GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, GPIO_PIN_3);
+        delay(rate);
+        GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, 0x0);
+        delay(rate);
+
+    }
+    i++;
+    }
+}
+#define BASE 200000;
+void delay(float modifier){
+    //hard to time accurately should be 1 branch, 1 int op
+    //would be more but working directly with registers
+    //think it would be just cr or cr/2
+    //volatile uint32_t u\;
+    int i;
+    volatile uint32_t size = modifier * BASE
+    for(i = 0; i < size; i++){
+    }
+//    for(ui32Loop = 0; ui32Loop < 200000; ui32Loop++)
+//          {
+//          }
+}
+
+/**
+ * main.c
+ */
+int main(void)
+{
+    //a 16.0-MHz internal circuit clock
+
+    SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOF);
+    while(!SysCtlPeripheralReady(SYSCTL_PERIPH_GPIOF))
+    {
+    }
+
+    //set the GPIO pins for outputting on led
+    //red
+   GPIOPinTypeGPIOOutput(GPIO_PORTF_BASE, GPIO_PIN_1);
+    //blue
+    GPIOPinTypeGPIOOutput(GPIO_PORTF_BASE, GPIO_PIN_2);
+//   / blink('r', 1.0, 10);
+
+    while(1){
+        blink('b', 1.0, 10);
+        blink('r', .5, 10);
+    }
+//    while(1){
+//    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, GPIO_PIN_1);
+//    delay(2);
+//    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, 0x0);
+//    delay(2);
+//    }
+  //  while(1){
+          //turn on led
+                // GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, 0x0);
+                 //wait
+                 //delay();
+                 //turn off led
+                 //GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, 0x0);
+                 //delay();
+     // }
+
+}
+
