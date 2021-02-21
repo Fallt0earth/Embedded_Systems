@@ -1,1 +1,0 @@
--mv4 --code_state=32 -g --diag_warning=225 --diag_wrap=off --display_error_number -z -m"Lab00.map" -i"F:/CCS10.2.0.00009_win64/ccs/tools/compiler/ti-cgt-arm_20.2.4.LTS/lib" -i"F:/CCS10.2.0.00009_win64/ccs/tools/compiler/ti-cgt-arm_20.2.4.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab00_linkInfo.xml" --rom_model 

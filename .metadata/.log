@@ -2008,3 +2008,16 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.ti.ccstud
 
 !ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2021-02-21 16:53:49.621
 !MESSAGE CCS HTTP adapter started! [ccs.port:7083] - Open 'http://localhost:7083/ide' in web browser to see listing of available APIs...
+
+!ENTRY org.eclipse.core.resources 2 2 2021-02-21 17:09:40.722
+!MESSAGE Save operation warnings.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2021-02-21 17:09:40.722
+!MESSAGE The project description file (.project) for 'Lab00' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2021-02-21 17:09:40.722
+!MESSAGE The project description file (.project) for 'RemoteSystemsTempFiles' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2021-02-21 17:09:40.722
+!MESSAGE The project description file (.project) for 'blinky' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2021-02-21 17:09:40.722
+!MESSAGE The project description file (.project) for 'lab000' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2021-02-21 17:09:40.722
+!MESSAGE The project description file (.project) for 'test' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
