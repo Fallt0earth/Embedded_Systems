@@ -4,5 +4,6 @@
 */project
 */Debug
 */macros.ini_initial
-RemoteSystemsTempFiles/
-blinky/
+/RemoteSystemsTempFiles
+/blinky
+.jxbrowser-data
